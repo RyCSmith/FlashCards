@@ -213,6 +213,26 @@ public class StudyGui extends JFrame {
         		
         	}});
         
+        //Window listener warns user of closing without saving
+        frame.addWindowListener(new WindowAdapter() {
+            
+            @Override public void windowClosing(WindowEvent e) {
+                if(saveIsCurrent == true){
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                }
+                else{
+                    int confirmed = JOptionPane.showConfirmDialog(null, "Are you sure you'd like to quit without saving?", "Quit",JOptionPane.YES_NO_OPTION);
+                
+                    if (confirmed == JOptionPane.YES_OPTION){ 
+                        frame.dispose();
+                    }
+                    else{
+                        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                    }
+                }
+            }
+        });
+        
       //Switch Perspective menu item
         switchMI.addActionListener(new ActionListener() { 
         	public void actionPerformed(ActionEvent e) 
