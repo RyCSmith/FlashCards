@@ -2,6 +2,7 @@ FlashCards
 ==========
 
 Design: This concept and initial structure was created as an assignment by Professor Dave Matuszek at the University of Pennsylvania. All implementation, GUI design and implementation developed by Ryan Smith and Rajveer Parikh.
+*Note SimpleIO.java was created by Dave Matuszek for use with this program.
 
 Overview: Program to create sets of flash cards and then study from them.
 
